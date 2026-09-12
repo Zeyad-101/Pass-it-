@@ -1,18 +1,69 @@
 import { escapeHtml } from '../ui.js';
 
 const QUESTIONS = [
+  // Food & Drink
   ['Pizza 🍕', 'Tacos 🌮'],
-  ['Beach vacation 🏖️', 'Mountain vacation 🏔️'],
-  ['Texting 💬', 'Calling 📞'],
   ['Coffee ☕', 'Tea 🍵'],
-  ['Cats 🐱', 'Dogs 🐶'],
-  ['Early bird 🌅', 'Night owl 🦉'],
+  ['Pancakes 🥞', 'Waffles 🧇'],
+  ['Chocolate 🍫', 'Gummy bears 🐻'],
+  ['Sushi 🍣', 'Burger 🍔'],
+  ['Ice cream 🍦', 'Cake 🎂'],
   ['Sweet 🍩', 'Salty 🍟'],
-  ['Books 📚', 'Movies 🎬'],
+  ['Cook at home 🍳', 'Eat out 🍽️'],
+  ['Hot food 🌶️', 'Cold food 🧊'],
+  ['Breakfast for dinner 🥞', 'Dinner for breakfast 🍗'],
+  ['Spicy 🔥', 'Mild 🌿'],
+  ['Juice 🍹', 'Soda 🥤'],
+  // Travel & Lifestyle
+  ['Beach vacation 🏖️', 'Mountain vacation 🏔️'],
+  ['Road trip 🚗', 'Flight ✈️'],
+  ['City life 🏙️', 'Countryside 🌾'],
+  ['Travel alone 🎒', 'Travel with friends 👫'],
+  ['Luxury hotel 🏨', 'Camping tent ⛺'],
+  ['Early bird 🌅', 'Night owl 🦉'],
+  ['Fast life ⚡', 'Slow life 🐢'],
+  // Tech & Entertainment
+  ['Texting 💬', 'Calling 📞'],
   ['Android 🤖', 'iPhone 🍎'],
-  ['Summer ☀️', 'Winter ❄️'],
+  ['Netflix 🎬', 'YouTube 📺'],
+  ['Books 📚', 'Movies 🎬'],
+  ['Video games 🎮', 'Board games 🎲'],
+  ['Podcast 🎙️', 'Music 🎵'],
+  ['Social media 📱', 'No social media 🚫'],
+  ['Work from home 🏠', 'Work at office 🏢'],
+  ['E-book 📖', 'Paper book 📗'],
+  // Animals & Nature
+  ['Cats 🐱', 'Dogs 🐶'],
+  ['Birds 🦜', 'Fish 🐠'],
+  ['Rabbits 🐰', 'Hamsters 🐹'],
+  ['Forest 🌲', 'Desert 🏜️'],
+  ['Sea 🌊', 'Lake 🏞️'],
+  // Fashion & Style
   ['Sneakers 👟', 'Boots 👢'],
-  ['Pancakes 🥞', 'Waffles 🧇']
+  ['Summer ☀️', 'Winter ❄️'],
+  ['Jeans 👖', 'Sweatpants 🩳'],
+  ['Minimal style 🤍', 'Bold colours 🌈'],
+  // Superpowers & Fun
+  ['Fly ✈️', 'Be invisible 👻'],
+  ['Read minds 🧠', 'See the future 🔮'],
+  ['Time travel to past ⏮️', 'Time travel to future ⏭️'],
+  ['Super speed ⚡', 'Super strength 💪'],
+  ['Talk to animals 🐾', 'Speak all languages 🗣️'],
+  // Personality
+  ['Always be honest 😇', 'Always be kind 🥰'],
+  ['Famous 🌟', 'Rich 💰'],
+  ['Lots of friends 👥', 'One best friend 🤝'],
+  ['Know everything 🧠', 'Experience everything 🎡'],
+  // Random & Wild
+  ['No phone for a week 📵', 'No Wi-Fi for a week 🚫'],
+  ['Always speak in rhymes 🎤', 'Always speak in questions ❓'],
+  ['Win the lottery 🎰', 'Live 200 years 🧬'],
+  ['Be a superhero 🦸', 'Be a villain 🦹'],
+  ['Own a dragon 🐉', 'Own a unicorn 🦄'],
+  ['Live underwater 🌊', 'Live in space 🚀'],
+  ['Restart your life 🔄', 'Fast-forward 10 years ⏩'],
+  ['Always win arguments 🏆', 'Always be happy 😊'],
+  ['Eat one food forever 🥗', 'Never eat your fav food 💔'],
 ];
 
 function mount(container, player, onComplete) {
