@@ -1,5 +1,7 @@
 # PASS IT! 🎮
 
+**[Play it now](https://pass-it-five.vercel.app/)**
+
 A pass-and-play party game for 2–8 people sharing one phone. No app to install, no account to make, no wifi required once the page has loaded.
 
 ## How it works
@@ -23,19 +25,21 @@ npx serve .
 
 Then open the local address it gives you. Any static file server works the same way.
 
-## Deploying
 
-This is a static site, so it deploys the same way to either:
+## Installing it as an app
 
-- **Vercel**: import the repo, set the framework preset to "Other," and leave the build command empty.
-- **GitHub Pages**: point Pages at the repo root or `main` branch.
-
-No environment variables, no backend, nothing to configure.
+The site ships with a web manifest and icon set, so on a phone you can add it to the home screen (Chrome: menu → "Add to Home screen"; Safari: share → "Add to Home Screen") and it opens full-screen with its own icon, no browser chrome. Handy since this is the kind of game that gets replayed with a different group every time.
 
 ## Project structure
 
 ```
 index.html
+manifest.webmanifest
+icons/
+  icon.svg
+  icon-192.png
+  icon-512.png
+  apple-touch-icon.png
 css/
   main.css
 js/
@@ -58,7 +62,7 @@ Each mini-game is its own file with the same interface, `mount(container, player
 
 ## What's saved between games
 
-Just the last set of player names, so you don't have to retype them for round two. Nothing else persists — no accounts, no server, no tracking.
+Just the last set of player names, so you don't have to retype them for round two. Nothing else persists: no accounts, no server, no tracking.
 
 ## License
 
