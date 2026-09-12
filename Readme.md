@@ -25,6 +25,14 @@ npx serve .
 
 Then open the local address it gives you. Any static file server works the same way.
 
+## Deploying
+
+This is a static site, so it deploys the same way to either:
+
+- **Vercel**: import the repo, set the framework preset to "Other," and leave the build command empty.
+- **GitHub Pages**: point Pages at the repo root or `main` branch.
+
+No environment variables, no backend, nothing to configure.
 
 ## Installing it as an app
 
